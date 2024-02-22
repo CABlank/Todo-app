@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+<div class="header">
+    <h1>Task Board</h1>
+    <form id="addColumnForm">
+        <input type="text" id="newColumnName" placeholder="New Column Name" required>
+        <button type="submit">Add Column</button>
+    </form>
+</div>
+
+<div class="board" id="board">
+    <% columns.forEach(function(column) { %>
+        <div class="column" data-column-id="<%= column.id %>">
+            <h2><%= column.name %></h2>
+            <!-- Cards for the column -->
+        </div>
+    <% }); %>
+</div>
+
+<script src="/script.js"></script>
+</body>
+</html>

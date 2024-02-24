@@ -15,15 +15,9 @@ This document outlines the scope of a Todo App designed to offer a streamlined a
 
 - **Organization**: Provide users the ability to categorize or tag tasks, facilitating efficient sorting and retrieval based on themes or priorities.
 
-### Reminders and Notifications
-
-- **Engagement**: Implement reminders for tasks based on their due dates or specific user-set alarms to ensure users are proactively notified about their upcoming tasks.
-
 ## User Interface
 
 - **Design Principle**: Adopt a minimalist design that emphasizes usability and easy navigation. The interface should be clean, with a focus on functionality.
-
-- **Responsiveness**: Ensure the app is fully responsive, delivering a seamless experience across devices, including smartphones, tablets, and desktop computers.
 
 ## Data Management
 
@@ -31,7 +25,7 @@ This document outlines the scope of a Todo App designed to offer a streamlined a
 
 - **Cloud Syncing** *(Optional)*: Consider offering an option for users to sync their data across devices via a cloud service, enhancing accessibility and data security.
 
-## User Accounts and Settings *(Optional)*
+## User Accounts and Settings
 
 - **Cloud Syncing Users**: If implementing cloud syncing, include user account creation and management. Allow users to log in to access and synchronize their tasks across multiple devices.
 

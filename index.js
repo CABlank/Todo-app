@@ -15,17 +15,22 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 app.get('/auth/google',
-  passport.authenticate('google', { scope: ['profile', 'email'] }));
+  passport.authenticate('google', { scope: ['profile', 'email'] }
+));
 
 app.get('/auth/google/callback', 
   passport.authenticate('google', { failureRedirect: '/login' }),
   function(req, res) {
     // Successful authentication, redirect home.
     res.redirect('/');
-  });
+});
+
+
+app.use(express.static('public'));
+app.set('view engine', 'ejs');
 
 app.get('/', (req, res) => {
-  res.send('Home Page. User: ' + req.user);
+res.render('index', { user: req.user });
 });
 
 app.get('/logout', (req, res) => {

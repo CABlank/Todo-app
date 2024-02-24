@@ -34,9 +34,16 @@ res.render('index', { user: req.user });
 });
 
 app.get('/logout', (req, res) => {
-  req.logout();
-  res.redirect('/');
+  req.logout(function(err) {
+    if (err) { return next(err); }
+    // Destroy session data
+    req.session.destroy(() => {
+      // Redirect to home page after logout
+      res.redirect('/');
+    });
+  });
 });
+
 
 const port = 3000;
 app.listen(port, () => {

@@ -1,0 +1,33 @@
+<div>   
+
+    <div class="board">
+  
+        <div class="column" id="todoColumn" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <div class="column-header">To Do</div>
+            <div class="add-card">
+                <button onclick="addCard('todoColumn', 'New Task', 'This is a new dynamically added task.', '2024-01-20', 'High')">Add Card</button>
+            </div>
+            <div class="card" draggable="true" ondragstart="drag(event)" id="card1">
+                <div class="card-content">
+                    <h3 class="card-title">Implement New Feature</h3>
+                    <p class="card-description">This task involves developing a new feature according to the specifications outlined in the documentation. Make sure to review the tech stack requirements.</p>
+                    <p class="card-due-date">Due: 2024-01-15</p>
+                    <div class="card-priority">Priority: <span>High/Medium/Low</span></div>
+                    <div class="card-tags">
+                        <span class="tag">Category 1</span>
+                        <span class="tag">Category 2</span>
+                    </div>
+                </div>
+            </div>
+            
+        </div>            
+        <div class="column" id="inProgressColumn" ondrop="drop(event)" ondragover="allowDrop(event)">            
+            <div class="column-header">In Progress</div>
+        </div>
+        <div class="column" id="doneColumn" ondrop="drop(event)" ondragover="allowDrop(event)">            
+            <div class="column-header">Done</div>
+        </div>
+    </div>
+
+
+</div>

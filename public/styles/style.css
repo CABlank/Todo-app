@@ -128,11 +128,20 @@ body, html {
     margin-top: 0;
 }
 
+.card-title :hover {
+    outline: -webkit-focus-ring-color auto 1px;
+}
+
 .card-description {
     color: #666;
     font-size: 0.95em;
     margin-top: 10px;
 }
+
+.card-description :hover {
+    outline: -webkit-focus-ring-color auto 1px;
+}
+
 
 .card-due-date {
     font-size: 0.9em;
@@ -268,4 +277,54 @@ body, html {
 .add-card button:hover {
     background-color: #218838; /* Darker green on hover */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+
+/* General button styling */
+.button {
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 5px;
+    margin: 5px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    outline: none;
+}
+
+.button:hover {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/* Specific styles for the Add Card button */
+.add-card button {
+    background-color: #007bff; /* Bootstrap primary blue */
+    color: white;
+}
+
+.add-card button:hover {
+    background-color: #0056b3;
+}
+
+/* Specific styles for the Save button */
+.save-btn {
+    background-color: #28a745; /* Bootstrap success green */
+    color: white;
+    margin-left: 20px;
+}
+
+.save-btn:hover {
+    background-color: #218838;
+}
+
+/* Specific styles for the Delete button */
+.delete-btn {
+    background-color: #dc3545; /* Bootstrap danger red */
+    color: white;
+    float: right;
+    margin-right: 20px;
+}
+
+.delete-btn:hover {
+    background-color: #c82333;
 }

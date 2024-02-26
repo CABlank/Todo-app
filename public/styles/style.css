@@ -1,4 +1,18 @@
-/* Style for the header */
+
+
+
+
+/* Base Styles */
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #e5e5e5;
+    color: #333;
+}
+
+/* Header Styles */
 header {
     display: flex;
     align-items: center;
@@ -8,7 +22,6 @@ header {
     padding: 10px 20px;
 }
 
-/* Style for the navigation links */
 nav ul {
     list-style: none;
     display: flex;
@@ -25,56 +38,11 @@ nav ul li a {
     text-decoration: none;
 }
 
-/* Add a hover effect for links */
 nav ul li a:hover {
     text-decoration: underline;
 }
 
-/* Style adjustments for other elements */
-body {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #e5e5e5;
-    color: #333;
-}
-
-.user-info, .login-prompt {
-    display: flex;
-    align-items: center;
-}
-
-.user-info p, .login-prompt p {
-    margin: 0 10px 0 0;
-}
-
-img {
-    border-radius: 50%;
-    width: 50px; /* Adjust based on your preference */
-    height: 50px; /* Maintain aspect ratio */
-    margin-right: 10px;
-}
-
-a, .user-info a {
-    background-color: #0056b3;
-    padding: 5px 10px;
-    border-radius: 5px;
-    color: white;
-    text-decoration: none;
-}
-
-a:hover, .user-info a:hover {
-    background-color: #003875;
-}
-
-
-body, html {
-    height: 100%;
-    margin: 0;
-    font-family: Arial, sans-serif;
-}
-
-
+/* Board and Column Styles */
 .board {
     display: flex;
     justify-content: space-between; /* Adjust to space-between for clearer separation */
@@ -103,6 +71,8 @@ body, html {
     text-align: center;
     border-radius: 8px 8px 0 0;
 }
+
+/* Card Styles */
 .card {
     background-color: #fff;
     border-radius: 8px;
@@ -122,78 +92,8 @@ body, html {
     padding: 20px;
 }
 
-.card-title {
-    color: #333;
-    font-size: 1.2em;
-    margin-top: 0;
-}
-
-.card-title :hover {
-    outline: -webkit-focus-ring-color auto 1px;
-}
-
-.card-description {
-    color: #666;
-    font-size: 0.95em;
-    margin-top: 10px;
-}
-
-.card-description :hover {
-    outline: -webkit-focus-ring-color auto 1px;
-}
-
-
-.card-due-date {
-    font-size: 0.9em;
-    font-weight: bold;
-    color: #007bff;
-    margin-top: 15px;
-}
-
-.card-priority {
-    display: inline-block;
-    padding: 5px 10px;
-    border-radius: 20px;
-    font-size: 0.8em;
-    font-weight: bold;
-    color: #fff;
-    margin-top: 10px;
-    background: linear-gradient(135deg, #f76b1c, #fad961); /* Example gradient for High priority */
-}
-
-.card-tags {
-    margin-top: 15px;
-}
-
-.tag {
-    display: inline-block;
-    background-color: #6c757d;
-    color: white;
-    padding: 5px 10px;
-    border-radius: 15px;
-    font-size: 0.75em;
-    margin-right: 5px;
-    margin-top: 5px;
-}
-
-
-.card {
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-    overflow: hidden; /* Ensures that border-radius is applied on child elements */
-    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Smooth transition for hover effects */
-    cursor: pointer; /* Change cursor to indicate the card is interactive */
-}
-
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-}
-
-.card-content {
-    padding: 20px;
+.card-title, .card-description, .card-due-date {
+    margin: 10px 0;
 }
 
 .card-title {
@@ -228,7 +128,6 @@ body, html {
     margin-bottom: 10px; /* Space below the due date */
 }
 
-
 .card-priority {
     display: inline-block;
     padding: 5px 10px;
@@ -255,6 +154,19 @@ body, html {
     margin-top: 5px;
 }
 
+/* Button Styles */
+.button, .add-card button, .save-btn, .delete-btn {
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 5px;
+    margin: 5px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    outline: none;
+    color: white;
+}
+
 
 .add-card {
     top: 20px; /* Adjust this value based on your header's height */
@@ -279,34 +191,6 @@ body, html {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-
-/* General button styling */
-.button {
-    padding: 10px 15px;
-    border: none;
-    cursor: pointer;
-    font-size: 14px;
-    border-radius: 5px;
-    margin: 5px;
-    transition: background-color 0.3s, box-shadow 0.3s;
-    outline: none;
-}
-
-.button:hover {
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-}
-
-/* Specific styles for the Add Card button */
-.add-card button {
-    background-color: #007bff; /* Bootstrap primary blue */
-    color: white;
-}
-
-.add-card button:hover {
-    background-color: #0056b3;
-}
-
-/* Specific styles for the Save button */
 .save-btn {
     background-color: #28a745; /* Bootstrap success green */
     color: white;
@@ -317,7 +201,6 @@ body, html {
     background-color: #218838;
 }
 
-/* Specific styles for the Delete button */
 .delete-btn {
     background-color: #dc3545; /* Bootstrap danger red */
     color: white;
@@ -327,4 +210,39 @@ body, html {
 
 .delete-btn:hover {
     background-color: #c82333;
+}
+
+.button:hover, .add-card button:hover, .save-btn:hover, .delete-btn:hover {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+
+/* General Styles */
+
+.user-info, .login-prompt {
+    display: flex;
+    align-items: center;
+}
+
+.user-info p, .login-prompt p {
+    margin: 0 10px 0 0;
+}
+
+img {
+    border-radius: 50%;
+    width: 50px; /* Adjust based on your preference */
+    height: 50px; /* Maintain aspect ratio */
+    margin-right: 10px;
+}
+
+a, .user-info a {
+    background-color: #0056b3;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+}
+
+a:hover, .user-info a:hover {
+    background-color: #003875;
 }

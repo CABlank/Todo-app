@@ -1,7 +1,7 @@
 const passport = require('passport');
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
 const fs = require('fs');
-const db = require('./database'); // Import the database configuration
+const db = require('../database'); // Import the database configuration
 
 const GOOGLE_CONFIG_PATH = 'content.json';
 const googleConfig = JSON.parse(fs.readFileSync(GOOGLE_CONFIG_PATH, 'utf8'));

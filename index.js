@@ -1,7 +1,7 @@
 const express = require('express');
 const session = require('express-session');
 const app = express();
-require('./passport-setup');
+require('./config/passportSetup');
 const passport = require('passport');
 
 app.use(session({
